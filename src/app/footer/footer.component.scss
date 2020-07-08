@@ -1,0 +1,31 @@
+// :host {
+//   display: grid;
+//   place-content: center;
+//   grid-template-rows: auto 1fr auto;
+// }
+
+.footer {
+  display: grid;
+  place-self: center;
+  grid-template-columns: repeat(3 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 0px 30px;
+  margin-bottom: 30px;
+  background-color: #d4af9c;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.timetable {
+  grid-column: 1;
+  grid-row: 1;
+}
+.address {
+  grid-column: 2;
+  grid-row: 1;
+}
+.contact {
+  grid-column: 3;
+  grid-row: 1;
+}
