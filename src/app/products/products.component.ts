@@ -20,13 +20,52 @@ export class ProductsComponent {
     "ushion Pads in all shapes & sizes, ranging from Small Scatter Cushions, Box  Cushions, Pillows, Sofa Seats & Backs, Bolster Cushions, V-Neck, Specialist Cushions for Orthopaedic or Specialist Medical Use. Filled with high quality non allergenic Hollowfibre or Feather Filled according to your specification.";
 
   /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
+  cards = this.breakpointObserver
+    .observe([
+      Breakpoints.Handset,
+      Breakpoints.XSmall,
+      Breakpoints.HandsetPortrait,
+      Breakpoints.Small,
+    ])
+    .pipe(
+      map(({ matches }) => {
+        if (matches) {
+          return [
+            {
+              title: "Rugs",
+              cols: 2,
+              rows: 1,
+              urls: "./assets/static/images/image1.jpg",
+              data: this.info1,
+            },
+            {
+              title: "Faux Fur",
+              cols: 2,
+              rows: 1,
+              urls: "./assets/static/images/image2.jpg",
+              data: this.info2,
+            },
+            {
+              title: "Home Textiles",
+              cols: 2,
+              rows: 1,
+              urls: "./assets/static/images/image5.jpg",
+              data: this.info3,
+            },
+            {
+              title: "Cushion",
+              cols: 2,
+              rows: 1,
+              urls: "./assets/static/images/image3.jpg",
+              data: this.info4,
+            },
+          ];
+        }
+
         return [
           {
             title: "Rugs",
-            cols: 1,
+            cols: 2,
             rows: 1,
             urls: "./assets/static/images/image1.jpg",
             data: this.info1,
@@ -41,8 +80,8 @@ export class ProductsComponent {
           {
             title: "Home Textiles",
             cols: 1,
-            rows: 1,
-            urls: "./assets/static/images/image4.jpg",
+            rows: 2,
+            urls: "./assets/static/images/image6.jpg",
             data: this.info3,
           },
           {
@@ -53,40 +92,8 @@ export class ProductsComponent {
             data: this.info4,
           },
         ];
-      }
-
-      return [
-        {
-          title: "Rugs",
-          cols: 2,
-          rows: 1,
-          urls: "./assets/static/images/image1.jpg",
-          data: this.info1,
-        },
-        {
-          title: "Faux Fur",
-          cols: 1,
-          rows: 1,
-          urls: "./assets/static/images/image2.jpg",
-          data: this.info2,
-        },
-        {
-          title: "Home Textiles",
-          cols: 1,
-          rows: 2,
-          urls: "./assets/static/images/image4.jpg",
-          data: this.info3,
-        },
-        {
-          title: "Cushion",
-          cols: 1,
-          rows: 1,
-          urls: "./assets/static/images/image3.jpg",
-          data: this.info4,
-        },
-      ];
-    })
-  );
+      })
+    );
 
   openDialog(info) {
     let dialogRef = this.matDialog.open(ProductInfoComponent, {

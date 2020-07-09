@@ -28,10 +28,10 @@
 
       <span>Brimlake textiles</span>
       <span class="spacer"></span>
-      <nav class="toolbar">
-        <a mat-raised-button color="primary" href=""> Ebay </a>
-        <a mat-raised-button color="primary" href=""> Amazon</a>
-        <a mat-raised-button color="primary" href=""> Contact Us </a>
+      <nav class="toolbar" *ngIf="!(isHandset$ | async)">
+        <a mat-raised-button color="accent" href=""> Ebay </a>
+        <a mat-raised-button color="accent" href=""> Amazon</a>
+        <a mat-raised-button color="accent" href=""> Contact Us </a>
       </nav>
     </mat-toolbar>
     <ng-content></ng-content>

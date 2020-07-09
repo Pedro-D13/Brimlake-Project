@@ -9,9 +9,10 @@
   place-self: center;
   grid-template-columns: repeat(3 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin: 0px 30px;
-  margin-bottom: 30px;
+  grid-auto-rows: minmax(auto, auto);
+  grid-auto-columns: auto;
+  margin: 0px 10px;
+  margin-bottom: 15px;
   background-color: #d4af9c;
   border-radius: 5px;
   padding: 10px;
@@ -28,4 +29,12 @@
 .contact {
   grid-column: 3;
   grid-row: 1;
+}
+
+@media (width: 668px) {
+  .footer {
+    display: grid;
+    grid-auto-columns: 1;
+    grid-auto-rows: 3;
+  }
 }
