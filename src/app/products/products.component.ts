@@ -53,7 +53,7 @@ export class ProductsComponent {
               data: this.info3,
             },
             {
-              title: "Cushion",
+              title: "Fabric",
               cols: 2,
               rows: 1,
               urls: "./assets/static/images/image3.jpg",
@@ -85,7 +85,7 @@ export class ProductsComponent {
             data: this.info3,
           },
           {
-            title: "Cushion",
+            title: "Fabric",
             cols: 1,
             rows: 1,
             urls: "./assets/static/images/image3.jpg",

@@ -21,6 +21,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDialogModule } from "@angular/material/dialog";
 import { ProductInfoComponent } from "./product-info/product-info.component";
 
+import { MatRippleModule } from "@angular/material/core";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { ProductInfoComponent } from "./product-info/product-info.component";
     BrowserAnimationsModule,
     MatGridListModule,
     MatInputModule,
+    MatRippleModule,
     MatFormFieldModule,
     MatDialogModule,
     MatCardModule,

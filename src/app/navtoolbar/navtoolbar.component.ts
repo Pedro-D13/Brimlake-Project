@@ -9,6 +9,8 @@ import { map, shareReplay } from "rxjs/operators";
   styleUrls: ["./navtoolbar.component.scss"],
 })
 export class NavtoolbarComponent {
+  rippleColor = "#504b7b";
+
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.HandsetPortrait, Breakpoints.XSmall])
     .pipe(
